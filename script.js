@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample project data
     const projects = [
       { id: 1, title: 'NinjagoMedia', owned: 'Yes', description: 'The place for all Ninjago content!', status: '63% Done', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
-      { id: 2, title: '#Soon', owned: 'Not even started...', description: '#Soon', status: '0% Done', image: 'images/project2.jpg', link: '#Soon' },
+      { id: 2, title: '#Soon', owned: 'Not even started...', description: '#Soon', status: '0% Done', image: './images/soon.png', link: '#Soon' },
       // Add more projects as needed
     ];
   
