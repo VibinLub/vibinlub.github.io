@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample project data
     const projects = [
       { id: 1, title: 'NinjagoMedia', owned: 'Yes', description: 'The place for all Ninjago content!', status: '63% Done', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
-      { id: 2, title: '#Soon', owned: 'Not even started...', description: '#Soon', status: '0% Done', image: './images/soon.jpg', link: '#Soon' },
+      { id: 2, title: '#Soon', owned: 'No Information At The Moment', description: '#Soon', status: '0% Done', image: './images/soon.jpg', link: '#Soon' },
       // Add more projects as needed
     ];
   
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         projectItem.innerHTML = `
           <a href="${project.link}" target="_blank">
             <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title} | ${project.owned}</h3>
+            <h3>${project.title} | Owned: ${project.owned}</h3>
             <p>${project.description}</p>
             <p>${project.status}</p>
           </a>
