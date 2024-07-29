@@ -248,3 +248,13 @@ section {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Remove blue color and underline from links */
+a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Optionally, add underline on hover */
+}
