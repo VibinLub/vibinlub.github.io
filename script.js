@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Sample project data
     const projects = [
-      { id: 1, title: 'NinjagoMedia', description: 'The place for all Ninjago content!', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
-      { id: 2, title: '#Soon', description: '#Soon', image: 'images/project2.jpg', link: '#Soon' },
+      { id: 1, title: 'NinjagoMedia', owned: 'Yes', description: 'The place for all Ninjago content!', status: '63% Done', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
+      { id: 2, title: '#Soon', owned: 'Not even started...', description: '#Soon', status: '0% Done', image: 'images/project2.jpg', link: '#Soon' },
       // Add more projects as needed
     ];
   
@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
         projectItem.innerHTML = `
           <a href="${project.link}" target="_blank">
             <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title}</h3>
+            <h3>${project.title} | ${project.owned}</h3>
             <p>${project.description}</p>
+            <p>${project.status}</p>
           </a>
         `;
         projectList.appendChild(projectItem);
