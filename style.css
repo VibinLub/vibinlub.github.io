@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Dosis', sans-serif;
   margin: 0;
@@ -112,6 +113,15 @@ section {
   text-decoration: none;
 }
 
+#about, #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Dark Theme */
 .dark-theme {
   background-color: #333;
   color: white;
@@ -174,14 +184,6 @@ section {
 
 .light-theme #contact {
   background-color: #ccc;
-}
-
-#about, #contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /* Responsive Design */
