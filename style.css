@@ -265,3 +265,40 @@ a {
 a:hover {
   text-decoration: underline; /* Optionally, add underline on hover */
 }
+
+/* Styles for the Not Started Yet page */
+.not-started {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.not-started h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.not-started p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.not-started button {
+  background-color: #555;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.not-started button:hover {
+  background-color: #777;
+}
