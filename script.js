@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { id: 1, title: 'NinjagoMedia', owned: 'Yes', description: 'The place for all Ninjago content!', status: '73% Done', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
       { id: 2, title: 'FireSearch', owned: 'Yes', description: 'A Google Based Search Engine', status: '100% Done', image: './images/project2.png', link: 'https://vibinlub.github.io/FireSearch/' },
       { id: 3, title: 'Dart Scores', owned: 'Yes', description: 'The best way to count your darting game!', status: 'Not Started Yet', image: './images/project3.png', link: 'https://vibinlub.github.io/NotStartedYet.html'},
-      { id: 4, title: 'Woordenboek', owned: 'Yes', description: 'Het woordenboek van Lub, speciaal voor Bermgeits OG Spastjes', status: '30% Klaar', image: './images/project4.png', link: 'https://vibinlub.github.io/Woordenboek'}
+      { id: 4, title: 'Woordenboek', owned: 'Yes', description: 'Het woordenboek van Lub, speciaal voor Bermgeits OG Spastjes', status: '33% Klaar', image: './images/project4.png', link: 'https://vibinlub.github.io/Woordenboek'}
       // Add more projects as needed
     ];
   
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const icon = toggleThemeButton.querySelector('i');
       const text = toggleThemeButton.querySelector('span');
       if (body.classList.contains('dark-theme')) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        text.textContent = 'Dark Mode';
-      } else {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
         text.textContent = 'Light Mode';
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        text.textContent = 'Dark Mode';
       }
     });
   
