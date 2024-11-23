@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (body.classList.contains('dark-theme')) {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
-        text.textContent = 'Light Mode';
+        text.textContent = 'Depressive Mode (Light Mode)';
       } else {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
