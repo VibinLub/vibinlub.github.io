@@ -4,52 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lub's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="icon" href="images/profile.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
-<body class="dark-theme">
-  <header>
-    <div class="profile-photo">
-      <img src="images/profile.jpg" alt="Profile Photo">
-    </div>
-    <div class="header-content">
-      <h1>Lub's Portfolio</h1>
-
-    </div>
+<body>
+  <!-- Floating Header -->
+  <header class="floating-header">
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="home">
-    <h1>Welcome to my Portfolio!</h1>
-    <p>Here you can find my sites I am working on but also the ones I contributed to!</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div id="projectList">
-      <!-- Project items will be inserted here -->
+  <!-- Hero Section -->
+  <section id="hero" class="section">
+    <div class="hero-content">
+      <h1>Lub</h1>
+      <p>Welcome to my world of coding and creativity!</p>
+      <button onclick="document.getElementById('introduction').scrollIntoView({behavior: 'smooth'});">Discover More</button>
     </div>
-          <div class="header-actions">
-        <input type="text" id="search" placeholder="Search projects...">
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Introduction Section -->
+    <section id="introduction" class="section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Discover my projects, skills, and more about me! I am a developer with a passion for solving problems and building impactful applications.</p>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="section">
+      <h2>Stats</h2>
+      <div class="stats-container">
+        <div class="stat-item">
+          <p>HTML</p>
+          <div class="progress-bar" data-value="90"></div>
+        </div>
+        <div class="stat-item">
+          <p>CSS</p>
+          <div class="progress-bar" data-value="70"></div>
+        </div>
+        <div class="stat-item">
+          <p>JS (For Web)</p>
+          <div class="progress-bar" data-value="10"></div>
+        </div>
+        <div class="stat-item">
+          <p>Problem Solving</p>
+          <div class="progress-bar" data-value="75"></div>
+        </div>
+        <div class="stat-item">
+            <p>Idea Making</p>
+            <div class="progress-bar" data-value="56"></div>
+          </div>
+          <div class="stat-item">
+            <p>Web Design</p>
+            <div class="progress-bar"  data-value="86"></div>
+          </div>
       </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello, I am a Dutch gamer who wants to be a professional HTML, CSS and JS coder. It's my passion to create things on the internet, from pictures to Minecraft servers!</p>
-  </section>
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I am a passionate developer with a focus on creating interactive and visually appealing web applications. My journey began with coding small applications, and now I specialize in full-stack web development. My goal is to contribute to projects that make a difference.</p>
+      <p>Some key highlights about me:</p>
+      <ul>
+        <li>Experienced in making Discord servers</li>
+        <li>Strong problem-solving abilities</li>
+        <li>Interest in web development</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:lubbertschenk@hotmail.com"><i class="fas fa-envelope"></i> lubbertschenk@hotmail.com</a></p>
-    <p><a href="https://github.com/vibinlub" target="_blank"><i class="fab fa-github"></i> Github.com/vibinlub</a></p>
-    <button id="toggleTheme">
-      <i class="fas fa-sun"></i> <span>Depressive Mode (Light Mode!)</span>
-    </button>
-    <p>© Lubbert Schenk</p>
-  </section>
+    <!-- My Projects Section -->
+    <section id="projects" class="section">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <img src="project1.png" alt="Project 1">
+          <h3><a href="https://lubbertschenk.nl/Hydration">Hydration</a></h3>
+          <p>A Discord-based application that helps you hydrate every hour and keeps track of how much hydration you had.</p>
+        </div>
+        <div class="project-item">
+          <img src="project2.png" alt="Project 2">
+          <h3><a href="https://lubbertschenk.nl/NinjagoMedia">NinjagoMedia</a></h3>
+          <p>Using NinjagoMedia you can watch all Ninjago content for free. We offer an easy-to-use design.
+          </p>
+        </div>
+        <div class="project-item">
+          <img src="project3.png" alt="Project 3">
+          <h3><a href="https://lubbertschenk.nl/Woordenboek">Woordenboek</a></h3>
+          <p>An Dictionary (Woordenboek) made for my friend Bermgeit, this site is Dutch!</p>
+        </div>
+        <div class="project-item">
+          <img src="project4.png" alt="Project 4">
+          <h3><a href="https://dart-counting.com">Dart-Counting</a></h3>
+          <p>Dart-Counting.com is the Dart Counting app from 2025! Made by an Dutch darter who's fan of Van Duivenbode</p>
+        </div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Contact Me Section -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaboration, questions, or just to connect!</p>
+      <form action="mailto:lubbertschenk@hotmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <p>Discord: <a href="https://discord.gg/v2y2cB8KrB">discord.gg/v2y2cB8KrB</a></p>
+      <p>GitHub: <a href="https://github.com/VibinLub">github.com/VibinLub</a></p>
+    </div>
+    <p>&copy; Copyright Lub</p>
+  </footer>
 </body>
 </html>

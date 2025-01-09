@@ -1,64 +1,55 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleThemeButton = document.getElementById('toggleTheme');
-    const body = document.body;
-    const searchInput = document.getElementById('search');
-    const projectList = document.getElementById('projectList');
+// JavaScript for Interactivity
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
   
-    // Sample project data
-    const projects = [
-      { id: 1, title: 'NinjagoMedia', owned: 'Yes', description: 'The place for all Ninjago content!', status: '73% Done', image: 'images/project1.jpg', link: 'https://vibinlub.github.io/NinjagoMedia/' },
-      { id: 2, title: 'FireSearch', owned: 'Yes', description: 'A Google Based Search Engine', status: '100% Done', image: './images/project2.png', link: 'https://vibinlub.github.io/FireSearch/' },
-      { id: 3, title: 'Dart Counting', owned: 'Yes', description: 'The best way to count your darting game!', status: '62%', image: './images/project3.png', link: 'https://dart-counting.com'},
-      { id: 4, title: 'Woordenboek', owned: 'Yes', description: 'Het woordenboek van Lub, speciaal voor Bermgeits OG Spastjes', status: '33% Klaar', image: './images/project4.png', link: 'https://vibinlub.github.io/Woordenboek'}
-      // Add more projects as needed
-    ];
-  
-    // Function to display projects
-    function displayProjects(projects) {
-      projectList.innerHTML = '';
-      projects.forEach(project => {
-        const projectItem = document.createElement('div');
-        projectItem.classList.add('project-item');
-        projectItem.innerHTML = `
-          <a href="${project.link}" target="_blank">
-            <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title} | Owned: ${project.owned}</h3>
-            <p>${project.description}</p>
-            <p>${project.status}</p>
-          </a>
-        `;
-        projectList.appendChild(projectItem);
-      });
-    }
-  
-    // Initial display of projects
-    displayProjects(projects);
-  
-    // Theme toggle functionality
-    toggleThemeButton.addEventListener('click', function() {
-      body.classList.toggle('dark-theme');
-      body.classList.toggle('light-theme');
-      const icon = toggleThemeButton.querySelector('i');
-      const text = toggleThemeButton.querySelector('span');
-      if (body.classList.contains('dark-theme')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        text.textContent = 'Depressive Mode (Light Mode!)';
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        text.textContent = 'Dark Mode';
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
       }
     });
+  });
   
-    // Search functionality
-    searchInput.addEventListener('input', function() {
-      const searchTerm = searchInput.value.toLowerCase();
-      const filteredProjects = projects.filter(project => 
-        project.title.toLowerCase().includes(searchTerm) || 
-        project.description.toLowerCase().includes(searchTerm)
-      );
-      displayProjects(filteredProjects);
+  // Dynamic progress bars in Stats section
+  document.querySelectorAll('.progress-bar').forEach(bar => {
+    const value = bar.getAttribute('data-value');
+    bar.style.setProperty('--progress-value', `${value}%`);
+  });
+  
+  // Scroll-triggered animation for sections
+  const sections = document.querySelectorAll('.section');
+  const observerOptions = {
+    root: null,
+    threshold: 0.2
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, observerOptions);
+  
+  sections.forEach(section => {
+    section.classList.add('hidden');
+    observer.observe(section);
+  });
+  
+  // Form validation
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    const name = form.querySelector('#name').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const message = form.querySelector('#message').value.trim();
+  
+    if (!name || !email || !message) {
+      e.preventDefault();
+      alert('Please fill out all fields before submitting.');
+    }
   });
   
